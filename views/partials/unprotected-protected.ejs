@@ -1,0 +1,13 @@
+<% if(req.path.startsWith("/protected") && user) { %>
+  <p>
+    Yep, this is protected but you are logged in. All good!
+  </p>
+<% } else if(req.path.startsWith("/protected") && !user) { %>
+  <p>
+    Oh no, this is protected but you are <b>not</b> logged in. Something is wrong!
+  </p>
+<% } else if(req.path.startsWith("/unprotected")) { %>
+  <p>
+    Yep, this is unprotected so you should be able to see it either way. All good!
+  </p>
+<% } %>

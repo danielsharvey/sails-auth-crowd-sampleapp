@@ -32,9 +32,9 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  }
+  '/': 'HomepageController.homepage',
+  '/protected': 'HomepageController.protected',
+  '/unprotected': 'HomepageController.unprotected',
 
   /***************************************************************************
   *                                                                          *

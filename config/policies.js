@@ -28,6 +28,15 @@ module.exports.policies = {
 
   // '*': true,
 
+  // catch-all
+  '*': [ 'basicAuth', 'passport', 'sessionAuth' ],
+
+  'HomepageController': {
+    homepage: 'passport',
+    unprotected: 'passport',
+    //protected is captured by '*' above
+  },
+
   /***************************************************************************
   *                                                                          *
   * Here's an example of mapping some policies to run before a controller    *

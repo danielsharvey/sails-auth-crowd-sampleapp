@@ -1,0 +1,7 @@
+<p>
+  <% if (!user) { %>
+    No, I'm not logged in :(
+  <% } else { %>
+    Yep, you're logged in as the user <%= user.username %> (<%= user.email %>).
+  <% } %>
+</p>

@@ -29,51 +29,22 @@ setTimeout(function sunrise () {
           <%- partial ('partials/me.ejs') %>
         </div>
       </li>
-      <% if (!user) { %>
-        <li class="clearfix">
-          <div class="step">
-            <div class="sprite two"></div>
-            <h3>OK, Let's Login Then</h3>
-            <%- partial ('partials/login.ejs') %>
-          </div>
-        </li>
-      <% } %>
       <li class="clearfix">
         <div class="step">
           <div class="sprite two"></div>
-          <h3>Now, some test URLs</h3>
-            <%- partial ('partials/test-urls.ejs') %>
-          </div>
-        </li>
-      <% if (user) { %>
-        <li class="clearfix">
-          <div class="step">
-            <div class="sprite three"></div>
-            <h3>Done? Let's Log Out</h3>
-            <%- partial ('partials/logout.ejs') %>
-          </div>
-        </li>
-      <% } %>
+          <h3>Should I be able to see this page?</h3>
+          <%- partial('partials/unprotected-protected.ejs') %>
+        </div>
+      </li>
+      <li class="clearfix">
+        <div class="step">
+          <div class="sprite three"></div>
+          <h3>Back Home</h3>
+          <p>
+            Head back to the webapp <a href="/">homepage</a>.
+          </p>
+        </div>
+      </li>
     </ul>
-    <div class="links">
-      <!-- <h3>Links</h3> -->
-      <ul class="link-list">
-
-        <h4>Docs</h4>
-        <a target="_blank" href="http://sailsjs.org/#!/documentation/anatomy/myApp"><li>App Structure</li></a>
-        <a target="_blank" href="http://sailsjs.org/#!/documentation/reference"><li>Reference</li></a>
-        <a target="_blank" href="http://sailsjs.org/#!/documentation/concepts/extending-sails/Adapters/adapterList.html"><li>Supported Databases</li></a>
-
-        <h4>Tutorials</h4>
-        <a target="_blank" href="https://github.com/sails101"><li>Sails 101</li></a>
-
-        <h4>Community</h4>
-        <a target="_blank" href="http://stackoverflow.com/search?q=sails.js"><li>StackOverFlow</li></a>
-        <a target="_blank" href="https://github.com/balderdashy/sails"><li>GitHub</li></a>
-        <a target="_blank" href="https://groups.google.com/forum/#!forum/sailsjs"><li>Google Group</li></a>
-        <a target="_blank" href="http://webchat.freenode.net/"><li>IRC (#sailsjs on freenode)</li></a>
-
-      </ul>
-    </div>
   </div>
 </div>
