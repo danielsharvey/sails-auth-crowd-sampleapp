@@ -19,9 +19,23 @@ Let me know of any issues.
    In the meantime, I am working of local development as follows:
   - `npm link sails-auth`
   - `npm link passport-atlassian-crowd2`
-2. Review the configuration for a Crowd authentication strategy in
+1. Review the configuration for a Crowd authentication strategy in
    `config/passport.js`.
-2. Configure an appropriate Crowd Application (using the Crowd webapp - outside
+1. Configure an appropriate Crowd Application (using the Crowd webapp - outside
    the scope of this sampleapp).
-3. Enter the Crowd Application specific configuration in `config/local.js`
-4. Start the app and test (`sails lift`).
+1. Enter the Crowd Application specific configuration in `config/local.js` e.g.
+   ```
+   module.exports = {
+
+   passport: {
+      'atlassian-crowd': {
+         options: {
+            crowdServer: 'https://somewhere.com/crowd/',
+            crowdApplication: 'appname',
+            crowdApplicationPassword: "XXX"
+         }
+        }
+      }
+   }
+   ```
+1. Start the app and test (`sails lift`).
